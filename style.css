@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --transition: all 0.3s;
+  --spacing: 5px;
+  --radius: 8px;
+}
+
+body {
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background: url("./hero.jpeg") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+}
+
+.modal-content {
+  background: white;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 90vw;
+  max-width: 700px;
+  height: 250px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.modal-content:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.modal-content h1 {
+  letter-spacing: var(--spacing);
+  color: gray;
+  font-size: 2.5rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.45rem 0.85rem;
+  border: 2px solid black;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  z-index: -10;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.show-overlay {
+  opacity: 1;
+  z-index: 10;
+}
+
+.show-modal {
+  background: white;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 90vw;
+  max-width: 700px;
+  height: 250px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.show-modal h3 {
+  font-size: 1.3rem;
+  letter-spacing: var(--spacing);
+  color: grey;
+  margin-top: 1.5rem;
+}
+
+.icon {
+  color: orangered;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.icon:hover {
+  transform: rotate(360deg) scale(1.2);
+}
